@@ -34,7 +34,7 @@ type = git_repo
 path = ~/AFC-Klipper-Add-On
 origin = https://github.com/ArmoredTurtle/AFC-Klipper-Add-On.git
 managed_services = klipper moonraker
-primary_branch = 
+primary_branch = main
 install_script = install-afc.sh
 
 [update_manager beacon]
