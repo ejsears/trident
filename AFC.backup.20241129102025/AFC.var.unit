@@ -26,7 +26,7 @@
             "material": "",
             "color": "#000000",
             "tool_loaded": false,
-            "hub_loaded": false,
+            "hub_loaded": true,
             "weight": 0,
             "command": null
         },
