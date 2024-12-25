@@ -1,56 +1,89 @@
 {
     "Turtle_1": {
         "leg1": {
-            "spool_id": "",
-            "material": "",
-            "color": "#000000",
-            "weight": 0,
-            "runout_lane": "NONE",
+            "LANE": 1,
             "map": "T0",
-            "index": 1,
-            "tool_loaded": true,
-            "hub_loaded": true,
+            "load": true,
+            "prep": true,
+            "tool_loaded": false,
+            "loaded_to_hub": true,
+            "material": "",
+            "spool_id": "",
+            "color": "",
+            "weight": "",
+            "runout_lane": "NONE",
             "filament_status": "Ready",
-            "filament_status_led": "#00cc00"
+            "filament_status_led": "#00cc00",
+            "status": "Loaded"
         },
         "leg2": {
-            "spool_id": "",
-            "material": "",
-            "color": "#000000",
-            "weight": 0,
-            "runout_lane": "NONE",
+            "LANE": 2,
             "map": "T1",
-            "index": 2,
+            "load": true,
+            "prep": true,
             "tool_loaded": false,
-            "hub_loaded": true,
+            "loaded_to_hub": true,
+            "material": "",
+            "spool_id": "",
+            "color": "",
+            "weight": "",
+            "runout_lane": "NONE",
             "filament_status": "Ready",
-            "filament_status_led": "#00cc00"
+            "filament_status_led": "#00cc00",
+            "status": "Loaded"
         },
         "leg3": {
-            "spool_id": "",
-            "material": "",
-            "color": "#000000",
-            "weight": 0,
-            "runout_lane": "NONE",
+            "LANE": 3,
             "map": "T2",
-            "index": 3,
+            "load": true,
+            "prep": true,
             "tool_loaded": false,
-            "hub_loaded": false,
+            "loaded_to_hub": true,
+            "material": "",
+            "spool_id": "",
+            "color": "",
+            "weight": "",
+            "runout_lane": "NONE",
             "filament_status": "Ready",
-            "filament_status_led": "#00cc00"
+            "filament_status_led": "#00cc00",
+            "status": "Loaded"
         },
         "leg4": {
-            "spool_id": "",
-            "material": "",
-            "color": "#000000",
-            "weight": 0,
-            "runout_lane": "NONE",
+            "LANE": 4,
             "map": "T3",
-            "index": 4,
+            "load": true,
+            "prep": true,
             "tool_loaded": false,
-            "hub_loaded": true,
+            "loaded_to_hub": true,
+            "material": "",
+            "spool_id": "",
+            "color": "",
+            "weight": "",
+            "runout_lane": "NONE",
             "filament_status": "Ready",
-            "filament_status_led": "#00cc00"
+            "filament_status_led": "#00cc00",
+            "status": "Loaded"
+        },
+        "system": {
+            "type": "Box_Turtle",
+            "hub_loaded": false,
+            "can_cut": false,
+            "screen": "None"
+        }
+    },
+    "system": {
+        "current_load": null,
+        "num_units": 1,
+        "num_lanes": 4,
+        "num_extruders": 1,
+        "extruders": {
+            "extruder": {
+                "lane_loaded": "",
+                "tool_start_sensor": false,
+                "tool_end_sensor": null,
+                "buffer": "TN2",
+                "buffer_status": "Advancing"
+            }
         }
     }
 }
