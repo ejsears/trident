@@ -36,6 +36,15 @@ sync_rate = 5
 [file_manager]
 enable_object_processing = True
 
+[update_manager afc-klipperscreen-add-on]
+type = git_repo
+path = ~/AFC-Klipper-Screen-Add-On
+origin = https://github.com/ArmoredTurtle/AFC-Klipper-Screen-Add-On.git
+primary_branch = main
+is_system_service = False
+info_tags = 
+	desc=AFC KlipperScreen Add On
+
 [update_manager beacon]
 type = git_repo
 channel = dev
