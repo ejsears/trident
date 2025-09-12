@@ -24,7 +24,8 @@
             "runout_lane": "lane4",
             "filament_status": "Not Ready",
             "filament_status_led": "#ff0000",
-            "status": "None"
+            "status": "None",
+            "dist_hub": 660.0
         },
         "lane2": {
             "name": "lane2",
@@ -50,7 +51,8 @@
             "runout_lane": null,
             "filament_status": "Not Ready",
             "filament_status_led": "#ff0000",
-            "status": "None"
+            "status": "None",
+            "dist_hub": 625.0
         },
         "lane3": {
             "name": "lane3",
@@ -76,7 +78,8 @@
             "runout_lane": null,
             "filament_status": "Not Ready",
             "filament_status_led": "#ff0000",
-            "status": "None"
+            "status": "None",
+            "dist_hub": 605.0
         },
         "lane4": {
             "name": "lane4",
@@ -102,7 +105,8 @@
             "runout_lane": null,
             "filament_status": "Not Ready",
             "filament_status_led": "#ff0000",
-            "status": "None"
+            "status": "None",
+            "dist_hub": 605.0
         },
         "lane5": {
             "name": "lane5",
@@ -128,7 +132,8 @@
             "runout_lane": null,
             "filament_status": "Not Ready",
             "filament_status_led": "#ff0000",
-            "status": "None"
+            "status": "None",
+            "dist_hub": 990.0
         },
         "lane6": {
             "name": "lane6",
@@ -154,7 +159,8 @@
             "runout_lane": null,
             "filament_status": "Not Ready",
             "filament_status_led": "#ff0000",
-            "status": "None"
+            "status": "None",
+            "dist_hub": 1000.0
         },
         "lane7": {
             "name": "lane7",
@@ -169,18 +175,19 @@
             "prep": true,
             "tool_loaded": false,
             "loaded_to_hub": true,
-            "material": null,
-            "density": 1.24,
+            "material": "ABS",
+            "density": 1.04,
             "diameter": 1.75,
-            "empty_spool_weight": 190,
-            "spool_id": null,
-            "color": "",
-            "weight": 993.9278152591868,
-            "extruder_temp": null,
+            "empty_spool_weight": 130.0,
+            "spool_id": 37,
+            "color": "#3A3C3B",
+            "weight": 472.17736336021096,
+            "extruder_temp": 250,
             "runout_lane": null,
             "filament_status": "Ready",
             "filament_status_led": "#00cc00",
-            "status": "None"
+            "status": "Loaded",
+            "dist_hub": 710.0
         },
         "lane8": {
             "name": "lane8",
@@ -206,7 +213,8 @@
             "runout_lane": null,
             "filament_status": "Not Ready",
             "filament_status_led": "#ff0000",
-            "status": "None"
+            "status": "None",
+            "dist_hub": 585.0
         }
     },
     "system": {
@@ -216,7 +224,7 @@
         "num_extruders": 1,
         "extruders": {
             "extruder": {
-                "lane_loaded": ""
+                "lane_loaded": null
             }
         },
         "bypass": {
