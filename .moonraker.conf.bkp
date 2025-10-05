@@ -21,6 +21,8 @@ cors_domains =
 	*://my.mainsail.xyz
 	*://app.fluidd.xyz
 
+[td1]
+
 [octoprint_compat]
 
 [history]
