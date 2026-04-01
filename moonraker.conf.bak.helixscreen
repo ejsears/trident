@@ -21,7 +21,7 @@ cors_domains:
     *://my.mainsail.xyz
     *://app.fluidd.xyz
     
-#[td1] 
+[td1] 
 
 [octoprint_compat]
 
@@ -38,6 +38,24 @@ sync_rate: 5
 [file_manager]
 enable_object_processing: True
 
+[update_manager tmc-4671]
+type: git_repo
+channel: dev
+path: ~/tmc-4671
+origin: https://github.com/andrewmcgr/tmc-4671.git
+managed_services: klipper
+primary_branch: main
+install_script: install.sh
+
+[update_manager afc-klipperscreen-add-on]
+type: git_repo
+path: ~/AFC-Klipper-Screen-Add-On
+origin: https://github.com/ArmoredTurtle/AFC-Klipper-Screen-Add-On.git
+primary_branch: main
+is_system_service: False
+info_tags:
+    desc=AFC KlipperScreen Add On
+    
 [update_manager beacon]
 type: git_repo
 channel: dev
@@ -51,6 +69,15 @@ managed_services: klipper
 info_tags:
     desc=Beacon Surface Scanner
     
+[update_manager KlipperScreen]
+type: git_repo
+path: ~/KlipperScreen
+origin: https://github.com/KlipperScreen/KlipperScreen.git
+virtualenv: ~/.KlipperScreen-env
+requirements: scripts/KlipperScreen-requirements.txt
+system_dependencies: scripts/system-dependencies.json
+managed_services: KlipperScreen
+    
 [update_manager Klippain-ShakeTune]
 type: git_repo
 origin: https://github.com/Frix-x/klippain-shaketune.git
@@ -58,13 +85,6 @@ path: ~/klippain_shaketune
 virtualenv: ~/klippy-env
 requirements: requirements.txt
 system_dependencies: system-dependencies.json
-primary_branch: main
-managed_services: klipper
-
-[update_manager klipper-sgp40]
-type: git_repo
-path: ~/klipper-sgp40
-origin: https://github.com/thetic/klipper-sgp40.git
 primary_branch: main
 managed_services: klipper
 
@@ -118,14 +138,3 @@ managed_services: klipper
 primary_branch: main
 install_script: install.sh
 
-
-# HelixScreen Update Manager
-# Added by HelixScreen installer - enables one-click updates from Mainsail/Fluidd
-# NOTE: type: web is used instead of type: zip as a workaround for
-# mainsail-crew/mainsail#2444 (zip type always shows UP-TO-DATE).
-# A systemd path unit handles service restart after Moonraker extracts the update.
-[update_manager helixscreen]
-type: web
-channel: stable
-repo: prestonbrown/helixscreen
-path: /home/pi/helixscreen
