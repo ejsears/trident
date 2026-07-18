@@ -16,6 +16,7 @@ trusted_clients =
 cors_domains = 
 	*.lan
 	*.local
+	*.localdomain
 	*://localhost
 	*://localhost:*
 	*://my.mainsail.xyz
@@ -30,7 +31,7 @@ channel = dev
 refresh_interval = 168
 
 [spoolman]
-server = http://10.5.1.11:7912
+server = http://10.5.0.72:7912
 sync_rate = 5
 
 [file_manager]

@@ -1,6 +1,6 @@
 {
   "active_printer_id": "default",
-  "config_version": 10,
+  "config_version": 19,
   "dark_mode": true,
   "display": {
     "bed_mesh_render_mode": 0,
@@ -8,6 +8,8 @@
     "dim_sec": 300,
     "drm_device": "",
     "gcode_render_mode": 0,
+    "gpu_3d_blocked": false,
+    "gpu_blur_blocked": false,
     "sleep_sec": 600
   },
   "gcode_viewer": {
@@ -22,6 +24,7 @@
       "d": 0.0,
       "e": 1.0,
       "f": 0.0,
+      "recheck_pending": false,
       "valid": false
     },
     "jitter_threshold": 5,
@@ -31,34 +34,112 @@
   },
   "language": "en",
   "led": {
+    "auto_state": {
+      "enabled": null
+    },
     "selected_strips": null
   },
   "log_path": "/tmp/helixscreen.log",
   "motion": {
-    "jog_mode": 1
+    "jog_mode": 2
   },
   "print_start_history": {
     "entries": [
       {
-        "phases": {
-          "3": 35
-        },
-        "timestamp": 1774644979,
-        "total": 35
+        "phases": {},
+        "timestamp": 1775577772,
+        "total": 332
+      },
+      {
+        "phases": {},
+        "timestamp": 1775472569,
+        "total": 10
+      },
+      {
+        "phases": {},
+        "timestamp": 1775577772,
+        "total": 332
+      },
+      {
+        "phases": {},
+        "timestamp": 1775472569,
+        "total": 10
+      },
+      {
+        "phases": {},
+        "timestamp": 1775577772,
+        "total": 332
+      },
+      {
+        "phases": {},
+        "timestamp": 1775577772,
+        "total": 332
+      },
+      {
+        "phases": {},
+        "timestamp": 1775472569,
+        "total": 10
+      },
+      {
+        "phases": {},
+        "timestamp": 1775577772,
+        "total": 332
       },
       {
         "phases": {
-          "4": 35
+          "7": 116
         },
-        "timestamp": 1774780827,
-        "total": 35
+        "temp_bucket": 2,
+        "timestamp": 1777734216,
+        "total": 188
       },
       {
         "phases": {
-          "3": 535
+          "7": 111
         },
-        "timestamp": 1774994600,
-        "total": 535
+        "temp_bucket": 2,
+        "timestamp": 1778277293,
+        "total": 210
+      },
+      {
+        "phases": {
+          "7": 110
+        },
+        "temp_bucket": 2,
+        "timestamp": 1779560754,
+        "total": 223
+      },
+      {
+        "phases": {
+          "7": 122
+        },
+        "temp_bucket": 2,
+        "timestamp": 1781386432,
+        "total": 174
+      },
+      {
+        "phases": {
+          "7": 147
+        },
+        "temp_bucket": 2,
+        "timestamp": 1782064072,
+        "total": 238
+      },
+      {
+        "phases": {
+          "7": 147
+        },
+        "temp_bucket": 2,
+        "timestamp": 1782388773,
+        "total": 372
+      },
+      {
+        "phases": {
+          "7": 133
+        },
+        "temp_bucket": 2,
+        "timestamp": 1783955529,
+        "total": 225
       }
     ]
   },
@@ -154,7 +235,7 @@
             "tmc5160 stepper_y",
             "temperature_sensor AFC_Pro"
           ],
-          "timestamp": "2026-04-01T11:52:41Z"
+          "timestamp": "2026-07-18T17:54:01Z"
         },
         "optional": []
       },
@@ -163,6 +244,9 @@
         "hotend": "extruder"
       },
       "leds": {
+        "auto_state": {
+          "mappings": null
+        },
         "color_presets": [
           "#FFFFFF",
           "#FFD700",
@@ -175,6 +259,7 @@
         ],
         "last_brightness": 100,
         "last_color": "#FFFFFF",
+        "last_white": null,
         "led_on_at_start": false,
         "macro_devices": [],
         "selected": [],
@@ -441,11 +526,62 @@
                   "id": "favorite_macro:1",
                   "row": 2,
                   "rowspan": 1
+                },
+                {
+                  "col": -1,
+                  "colspan": 1,
+                  "enabled": false,
+                  "id": "power_device",
+                  "row": -1,
+                  "rowspan": 1
+                },
+                {
+                  "col": 4,
+                  "colspan": 1,
+                  "enabled": true,
+                  "id": "fan_stack",
+                  "row": 1,
+                  "rowspan": 1
+                },
+                {
+                  "col": -1,
+                  "colspan": 1,
+                  "enabled": false,
+                  "id": "fan",
+                  "row": -1,
+                  "rowspan": 1
+                },
+                {
+                  "col": -1,
+                  "colspan": 1,
+                  "enabled": false,
+                  "id": "thermistor",
+                  "row": -1,
+                  "rowspan": 1
+                },
+                {
+                  "col": -1,
+                  "colspan": 2,
+                  "enabled": false,
+                  "id": "temp_graph",
+                  "row": -1,
+                  "rowspan": 2
+                },
+                {
+                  "col": -1,
+                  "colspan": 1,
+                  "enabled": false,
+                  "id": "favorite_macro",
+                  "row": -1,
+                  "rowspan": 1
                 }
               ]
             }
           ]
         }
+      },
+      "probe_sensors": {
+        "sensors": null
       },
       "temp_sensors": {
         "bed": "heater_bed",
@@ -456,8 +592,23 @@
     },
     "show_printer_switcher": false
   },
+  "telemetry_enabled": false,
   "theme": {
     "preset": 0
+  },
+  "thermal": {
+    "rates": {
+      "extruder": {
+        "heat_rate": 2.3950910568237305
+      },
+      "heater_bed": {
+        "heat_rate": 33.933570861816406
+      }
+    }
+  },
+  "tour": {
+    "completed": true,
+    "last_seen_version": 1
   },
   "ui": {
     "cached_grid": {
@@ -465,6 +616,9 @@
         "rows": 4
       }
     }
+  },
+  "update": {
+    "dismissed_version": "0.99.58"
   },
   "wizard_completed": true
 }
