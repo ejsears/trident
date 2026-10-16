@@ -115,9 +115,3 @@ managed_services = klipper
 primary_branch = main
 install_script = install.sh
 
-[update_manager helixscreen]
-type = web
-channel = stable
-repo = prestonbrown/helixscreen
-path = /home/pi/helixscreen
-

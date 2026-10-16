@@ -1,6 +1,6 @@
 {
   "active_printer_id": "default",
-  "config_version": 19,
+  "config_version": 21,
   "dark_mode": true,
   "display": {
     "bed_mesh_render_mode": 0,
@@ -33,12 +33,6 @@
     "touch_device": ""
   },
   "language": "en",
-  "led": {
-    "auto_state": {
-      "enabled": null
-    },
-    "selected_strips": null
-  },
   "log_path": "/tmp/helixscreen.log",
   "motion": {
     "jog_mode": 2
@@ -47,11 +41,6 @@
     "entries": [
       {
         "phases": {},
-        "timestamp": 1775577772,
-        "total": 332
-      },
-      {
-        "phases": {},
         "timestamp": 1775472569,
         "total": 10
       },
@@ -74,24 +63,6 @@
         "phases": {},
         "timestamp": 1775577772,
         "total": 332
-      },
-      {
-        "phases": {},
-        "timestamp": 1775472569,
-        "total": 10
-      },
-      {
-        "phases": {},
-        "timestamp": 1775577772,
-        "total": 332
-      },
-      {
-        "phases": {
-          "7": 116
-        },
-        "temp_bucket": 2,
-        "timestamp": 1777734216,
-        "total": 188
       },
       {
         "phases": {
@@ -140,13 +111,40 @@
         "temp_bucket": 2,
         "timestamp": 1783955529,
         "total": 225
+      },
+      {
+        "phases": {
+          "7": 36
+        },
+        "temp_bucket": 2,
+        "timestamp": 1784402839,
+        "total": 234
+      },
+      {
+        "phases": {
+          "7": 142
+        },
+        "temp_bucket": 2,
+        "timestamp": 1784623769,
+        "total": 234
+      },
+      {
+        "phases": {
+          "7": 141
+        },
+        "temp_bucket": 2,
+        "timestamp": 1785616885,
+        "total": 251
+      },
+      {
+        "phases": {
+          "7": 129
+        },
+        "temp_bucket": 2,
+        "timestamp": 1785680039,
+        "total": 237
       }
     ]
-  },
-  "printer": {
-    "leds": {
-      "startup_brightness": null
-    }
   },
   "printers": {
     "default": {
@@ -176,10 +174,22 @@
         "hotend": "heater_fan hotend_fan",
         "part": "fan"
       },
-      "filament": {},
-      "filament_sensors": {
-        "sensors": null
+      "filament": {
+        "external_spool": {
+          "assigned": true,
+          "bed_temp": 110,
+          "brand": "Siddament",
+          "color_rgb": 14459,
+          "material": "ABS",
+          "nozzle_temp_max": 0,
+          "nozzle_temp_min": 0,
+          "remaining_weight_g": 77.70696258544922,
+          "spool_name": "Siddament ABS - Blue ABS",
+          "spoolman_id": 33,
+          "total_weight_g": 1000.0
+        }
       },
+      "filament_sensors": {},
       "hardware": {
         "expected": [
           "heater_bed",
@@ -235,7 +245,7 @@
             "tmc5160 stepper_y",
             "temperature_sensor AFC_Pro"
           ],
-          "timestamp": "2026-07-18T17:54:01Z"
+          "timestamp": "2026-08-16T20:11:29Z"
         },
         "optional": []
       },
@@ -244,9 +254,7 @@
         "hotend": "extruder"
       },
       "leds": {
-        "auto_state": {
-          "mappings": null
-        },
+        "auto_state": {},
         "color_presets": [
           "#FFFFFF",
           "#FFD700",
@@ -259,7 +267,6 @@
         ],
         "last_brightness": 100,
         "last_color": "#FFFFFF",
-        "last_white": null,
         "led_on_at_start": false,
         "macro_devices": [],
         "selected": [],
@@ -580,9 +587,7 @@
           ]
         }
       },
-      "probe_sensors": {
-        "sensors": null
-      },
+      "probe_sensors": {},
       "temp_sensors": {
         "bed": "heater_bed",
         "hotend": "extruder"
@@ -599,10 +604,10 @@
   "thermal": {
     "rates": {
       "extruder": {
-        "heat_rate": 2.3950910568237305
+        "heat_rate": 2.7826876640319824
       },
       "heater_bed": {
-        "heat_rate": 33.933570861816406
+        "heat_rate": 14.556492805480957
       }
     }
   },
@@ -618,7 +623,7 @@
     }
   },
   "update": {
-    "dismissed_version": "0.99.58"
+    "dismissed_version": "0.99.106"
   },
   "wizard_completed": true
 }
