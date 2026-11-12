@@ -1,0 +1,44 @@
+[force_move]
+enable_force_move: True
+
+[AFC_extruder extruder]
+pin_tool_start: buffer
+tool_stn: 60.0                # Distance in mm from the toolhead sensor to the tip of the nozzle in mm, if `tool_end` is defined then distance is from this sensor
+tool_stn_unload: 24.0         # Distance to move in mm while unloading toolhead
+tool_sensor_after_extruder: 0.0 # Extra distance to move in mm once pre/post sensors are clear. Useful for when only using post sensor, so this distance can be the amout to move to clear extruder gears
+tool_unload_speed: 25           # Unload speed in mm/s when unloading toolhead. Default is 25mm/s.
+tool_load_speed: 25             # Load speed in mm/s when unloading toolhead. Default is 25mm/s.
+
+#[AFC_buffer AFC_Pro]
+#advance_pin: ^AFC_Pro:PG15
+#trailing_pin: ^AFC_Pro:PB3
+#multiplier_high: 1.05   # default 1.05, factor to feed more filament
+#multiplier_low:  0.95   # default 0.95, factor to feed less filament
+#filament_error_sensitivity: 6
+
+#[AFC_buffer AFC_Pro]
+#type: FPS_PSF
+#adc_pin: AFC_Pro:PA6
+#neutral_point: 0.5
+#max_tension: 0.1
+#max_compression: 0.9
+#reversed: false
+
+[include mcu/TN2.cfg]
+
+[AFC_buffer AFC_Pro]
+type: FPS_PSF
+adc_pin: TN2:PA0 #I don't remember which pin this is
+neutral_point: 0.5
+max_tension: 0.1
+max_compression: 0.9
+reversed: true  #Test slide by hand and look at buffer state in mainsail/fluidd Set to true if display shows opposite of your tested state.
+
+[AFC_led Buffer_Indicator]
+pin: TN2:PB1
+chain_count: 1
+color_order: GRBW
+initial_RED: 0.0
+initial_GREEN: 0.0
+initial_BLUE: 0.0
+initial_WHITE: 0.0
